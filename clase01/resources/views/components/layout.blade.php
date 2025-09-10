@@ -7,6 +7,7 @@
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/style.css') }}" rel="stylesheet">
     {{--  {{url( )}}  --}}
+    {{--   {{ route ('')  }}  --}}
 </head>
 <body>
 <div id=”app”>
@@ -20,14 +21,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/' )}}">Inicio</a>
+                        <a class="nav-link" href="{{ route('home')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('quienes-somos' )}}">Quiénes
+                        <a class="nav-link" href="{{route('about' )}}">Quiénes
                             Somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url( 'peliculas/listado')}}">Películas</a>
+                        <a class="nav-link" href="{{route( 'movies.index')}}">Películas</a>
                     </li>
                 </ul>
             </div>
