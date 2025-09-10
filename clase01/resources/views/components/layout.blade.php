@@ -21,7 +21,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home')}}">Inicio</a>
+                        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
+                           {!! request()->routeIs('home') ? 'aria-current="page"' : '' !!}
+                           href="{{ route('home')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('about' )}}">Quiénes
