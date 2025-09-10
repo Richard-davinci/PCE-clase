@@ -21,16 +21,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
-                           {!! request()->routeIs('home') ? 'aria-current="page"' : '' !!}
-                           href="{{ route('home')}}">Inicio</a>
+                        <x-nav-link route="home">Home</x-nav-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('about' )}}">Quiénes
-                            Somos</a>
+                        <x-nav-link route="about">Quiénes
+                            Somos
+                        </x-nav-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route( 'movies.index')}}">Películas</a>
+                        <x-nav-link route="movies.index">Películas</x-nav-link>
                     </li>
                 </ul>
             </div>
