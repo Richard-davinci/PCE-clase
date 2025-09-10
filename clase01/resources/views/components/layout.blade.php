@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? ''}} :: Proyecto Da Vinci</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
+    <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/style.css') }}" rel="stylesheet">
+    {{--  {{url( )}}  --}}
 </head>
 <body>
 <div id=”app”>
@@ -20,11 +20,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Inicio</a>
+                        <a class="nav-link" href="{{url('/' )}}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="quienes-somos">Quiénes
+                        <a class="nav-link" href="{{url('quienes-somos' )}}">Quiénes
                             Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url( 'peliculas/listado')}}">Películas</a>
                     </li>
                 </ul>
             </div>
